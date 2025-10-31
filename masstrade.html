@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MassTrade - System do sprzedaży wielokanałowej. Zarządzaj ofertami na Allegro, OLX, eBay i Otomoto z jednego miejsca.">
+    <meta name="keywords" content="MassTrade, sprzedaż wielokanałowa, Allegro, OLX, eBay, zarządzanie ofertami, automatyzacja sprzedaży">
+    <title>MassTrade - System Sprzedaży Wielokanałowej | AXL Dynamics</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="index.html" class="logo" aria-label="AXL Dynamics - strona główna">
+                    <span class="logo-text">AXL</span><span class="logo-accent">Dynamics</span>
+                </a>
+                
+                <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <ul class="nav-menu">
+                    <li><a href="index.html#produkty">Produkty</a></li>
+                    <li><a href="masstrade.html">MassTrade</a></li>
+                    <li><a href="pricing.html">Cennik</a></li>
+                    <li><a href="index.html#integracje">Integracje</a></li>
+                    <li><a href="index.html#o-nas">O nas</a></li>
+                    <li><a href="index.html#kontakt">Kontakt</a></li>
+                    <li><a href="https://masstrade.pl" class="btn-secondary">Zaloguj</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero mesh-gradient" role="banner">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">⚡ Najlepsze narzędzie do sprzedaży wielokanałowej</div>
+                <h1 class="hero-title">
+                    Zarządzaj Wszystkimi<br>
+                    Kanałami <span class="highlight">z Jednego Miejsca</span>
+                </h1>
+                <p class="hero-subtitle">
+                    MassTrade to kompleksowy system do sprzedaży wielokanałowej, który pozwala wystawiać i zarządzać ofertami na Allegro, OLX, eBay, Otomoto i innych platformach. Oszczędzaj czas i zwiększ sprzedaż.
+                </p>
+                <div class="hero-cta">
+                    <a href="#demo" class="btn-primary btn-large">
+                        Wypróbuj za darmo
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                    <a href="pricing.html" class="btn-outline btn-large">Zobacz cennik</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">500+</span>
+                        <span class="stat-label">Aktywnych sprzedawców</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">1M+</span>
+                        <span class="stat-label">Ofert miesięcznie</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">99.9%</span>
+                        <span class="stat-label">Uptime SLA</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="dashboard-mockup">
+                    <!-- Placeholder for MassTrade dashboard screenshot -->
+                    <div class="mockup-placeholder">
+                        <svg width="600" height="500" viewBox="0 0 600 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="600" height="500" rx="16" fill="url(#gradient-mt)"/>
+                            <rect x="20" y="20" width="560" height="80" rx="12" fill="white" opacity="0.15"/>
+                            <rect x="20" y="120" width="180" height="360" rx="12" fill="white" opacity="0.1"/>
+                            <rect x="220" y="120" width="360" height="180" rx="12" fill="white" opacity="0.15"/>
+                            <rect x="220" y="320" width="360" height="160" rx="12" fill="white" opacity="0.12"/>
+                            <defs>
+                                <linearGradient id="gradient-mt" x1="0" y1="0" x2="600" y2="500" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#FF6B35"/>
+                                    <stop offset="0.5" stop-color="#F7B801"/>
+                                    <stop offset="1" stop-color="#004E89"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Features Overview -->
+    <section class="features-overview">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Potężne Funkcje dla Twojego Biznesu</h2>
+                <p class="section-subtitle">Wszystko czego potrzebujesz do zarządzania sprzedażą wielokanałową</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🚀</div>
+                    <h3 class="feature-title">Masowe wystawianie</h3>
+                    <p class="feature-description">Wystawiaj setki ofert jednocześnie na wielu platformach. Import z CSV, Excel lub API.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🔄</div>
+                    <h3 class="feature-title">Automatyczna synchronizacja</h3>
+                    <p class="feature-description">Stany magazynowe i ceny aktualizują się automatycznie na wszystkich kanałach.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">📦</div>
+                    <h3 class="feature-title">Zarządzanie magazynem</h3>
+                    <p class="feature-description">Scentralizowane zarządzanie stanami magazynowymi z historią zmian.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🖼️</div>
+                    <h3 class="feature-title">Edycja zdjęć AI</h3>
+                    <p class="feature-description">Automatyczne usuwanie tła, optymalizacja rozmiaru i watermarking.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3 class="feature-title">Wbudowany PIM</h3>
+                    <p class="feature-description">Zarządzaj wszystkimi danymi produktowymi, atrybutami i wariantami.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🔌</div>
+                    <h3 class="feature-title">Integracje</h3>
+                    <p class="feature-description">Połączenie z przewoźnikami, BaseLinker, systemami ERP i księgowymi.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">📈</div>
+                    <h3 class="feature-title">Analityka sprzedaży</h3>
+                    <p class="feature-description">Raporty, wykresy i statystyki sprzedaży w czasie rzeczywistym.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🤖</div>
+                    <h3 class="feature-title">Automatyzacja</h3>
+                    <p class="feature-description">Reguły biznesowe, szablony i automatyczne akcje oszczędzające czas.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🔒</div>
+                    <h3 class="feature-title">Bezpieczeństwo</h3>
+                    <p class="feature-description">Szyfrowanie danych, regularne backupy i zgodność z RODO.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industry Solutions -->
+    <section class="industry-solutions">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Rozwiązania dla Różnych Branż</h2>
+                <p class="section-subtitle">MassTrade dostosowuje się do specyfiki Twojego biznesu</p>
+            </div>
+
+            <div class="industry-grid">
+                <article class="industry-card">
+                    <div class="industry-icon">🚗</div>
+                    <h3 class="industry-title">Motoryzacja</h3>
+                    <p class="industry-description">
+                        Specjalne narzędzia do sprzedaży części samochodowych. Automatyczne dopasowanie do VIN, obsługa katalogów TecDoc, wyszukiwanie zamienników.
+                    </p>
+                    <ul class="industry-features">
+                        <li>Integracja z katalogami TecDoc</li>
+                        <li>Wyszukiwanie po VIN</li>
+                        <li>Baza zamienników części</li>
+                        <li>Wsparcie dla Otomoto</li>
+                    </ul>
+                </article>
+
+                <article class="industry-card">
+                    <div class="industry-icon">👔</div>
+                    <h3 class="industry-title">Moda i odzież</h3>
+                    <p class="industry-description">
+                        Zarządzanie wariantami (rozmiary, kolory), sezonowe kolekcje, automatyczne tagowanie. Idealne dla sklepów odzieżowych.
+                    </p>
+                    <ul class="industry-features">
+                        <li>Zarządzanie rozmiarami i kolorami</li>
+                        <li>Tabele rozmiarów</li>
+                        <li>Sezonowe kolekcje</li>
+                        <li>Masowe zmiany cen</li>
+                    </ul>
+                </article>
+
+                <article class="industry-card">
+                    <div class="industry-icon">💻</div>
+                    <h3 class="industry-title">Elektronika</h3>
+                    <p class="industry-description">
+                        Szczegółowe specyfikacje techniczne, porównanie parametrów, automatyczne generowanie opisów z arkuszy danych producenta.
+                    </p>
+                    <ul class="industry-features">
+                        <li>Specyfikacje techniczne</li>
+                        <li>Numery seryjne i IMEI</li>
+                        <li>Gwarancje producenta</li>
+                        <li>Cross-selling i up-selling</li>
+                    </ul>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Tools -->
+    <section id="migratory" class="product-tools">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Dodatkowe Narzędzia</h2>
+                <p class="section-subtitle">Rozszerz możliwości MassTrade o specjalistyczne funkcje</p>
+            </div>
+
+            <div class="tools-grid">
+                <article class="tool-card">
+                    <div class="tool-header">
+                        <div class="tool-icon">
+                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="48" height="48" rx="12" fill="#004E89" opacity="0.1"/>
+                                <path d="M18 24H30M30 24L26 20M30 24L26 28" stroke="#004E89" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <circle cx="16" cy="24" r="3" stroke="#004E89" stroke-width="2"/>
+                                <circle cx="32" cy="24" r="3" stroke="#004E89" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="tool-title">Migratory</h3>
+                            <span class="tool-badge">Dodatek</span>
+                        </div>
+                    </div>
+                    <p class="tool-description">
+                        Automatyczne narzędzie do ekspresowej migracji ogłoszeń pomiędzy platformami sprzedażowymi. Przenieś tysiące ofert w kilka minut.
+                    </p>
+                    <ul class="tool-features">
+                        <li>Migracja między platformami</li>
+                        <li>Automatyczne mapowanie kategorii</li>
+                        <li>Zachowanie formatowania</li>
+                        <li>Transfer zdjęć</li>
+                    </ul>
+                    <a href="#demo" class="btn-outline">Dowiedz się więcej</a>
+                </article>
+
+                <article id="integrator" class="tool-card">
+                    <div class="tool-header">
+                        <div class="tool-icon">
+                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="48" height="48" rx="12" fill="#F7B801" opacity="0.1"/>
+                                <path d="M24 16V32M16 24H32" stroke="#F7B801" stroke-width="2" stroke-linecap="round"/>
+                                <circle cx="24" cy="16" r="2" fill="#F7B801"/>
+                                <circle cx="24" cy="32" r="2" fill="#F7B801"/>
+                                <circle cx="16" cy="24" r="2" fill="#F7B801"/>
+                                <circle cx="32" cy="24" r="2" fill="#F7B801"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="tool-title">Integrator</h3>
+                            <span class="tool-badge">Dodatek</span>
+                        </div>
+                    </div>
+                    <p class="tool-description">
+                        Narzędzie do pobierania zamówień z OLX, masowej aktywacji modelu prowizyjnego oraz automatycznego dodawania przesyłek.
+                    </p>
+                    <ul class="tool-features">
+                        <li>Pobieranie zamówień OLX</li>
+                        <li>Masowa aktywacja prowizji</li>
+                        <li>Integracja z BaseLinker</li>
+                        <li>Automatyzacja fulfillment</li>
+                    </ul>
+                    <a href="#demo" class="btn-outline">Dowiedz się więcej</a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Demo Placeholder -->
+    <section class="video-demo">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Zobacz MassTrade w Akcji</h2>
+                <p class="section-subtitle">3-minutowe demo pokazujące kluczowe funkcje systemu</p>
+            </div>
+
+            <div class="video-wrapper">
+                <div class="video-placeholder">
+                    <svg width="100%" height="100%" viewBox="0 0 800 450" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="800" height="450" rx="16" fill="#2D3142"/>
+                        <circle cx="400" cy="225" r="60" fill="white" opacity="0.1"/>
+                        <path d="M385 205L425 225L385 245V205Z" fill="white"/>
+                        <text x="400" y="300" text-anchor="middle" fill="white" opacity="0.6" font-size="18" font-family="Inter">Kliknij aby odtworzyć demo</text>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Preview -->
+    <section class="pricing-preview">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Proste i Przejrzyste Ceny</h2>
+                <p class="section-subtitle">Wybierz plan dopasowany do wielkości Twojego biznesu</p>
+            </div>
+
+            <div class="pricing-cards">
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3 class="pricing-name">Standard</h3>
+                        <div class="pricing-price">
+                            <span class="price-amount">299</span>
+                            <span class="price-currency">zł</span>
+                            <span class="price-period">/miesiąc</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>✓ Nielimitowane oferty</li>
+                        <li>✓ 5 platform sprzedażowych</li>
+                        <li>✓ Zarządzanie magazynem</li>
+                        <li>✓ Integracje z przewoźnikami</li>
+                        <li>✓ Wsparcie email (24h)</li>
+                    </ul>
+                    <a href="pricing.html" class="btn-outline">Szczegóły planu</a>
+                </div>
+
+                <div class="pricing-card featured">
+                    <div class="pricing-badge">Najpopularniejszy</div>
+                    <div class="pricing-header">
+                        <h3 class="pricing-name">Enterprise</h3>
+                        <div class="pricing-price">
+                            <span class="price-amount">599</span>
+                            <span class="price-currency">zł</span>
+                            <span class="price-period">/miesiąc</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>✓ Wszystko z Standard</li>
+                        <li>✓ API dostęp</li>
+                        <li>✓ Dedykowany opiekun</li>
+                        <li>✓ Priorytetowe wsparcie</li>
+                        <li>✓ SLA 99.9%</li>
+                    </ul>
+                    <a href="pricing.html" class="btn-primary">Szczegóły planu</a>
+                </div>
+            </div>
+
+            <div class="pricing-note">
+                <p>💡 Wszystkie plany zawierają 14-dniowy okres próbny. Bez karty kredytowej.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Historie Sukcesu Naszych Klientów</h2>
+                <p class="section-subtitle">Zobacz jak MassTrade pomógł rozwinąć ich biznesy</p>
+            </div>
+
+            <div class="testimonials-grid">
+                <article class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                    </div>
+                    <blockquote class="testimonial-text">
+                        "Dzięki MassTrade zwiększyliśmy sprzedaż części samochodowych o 400% w 6 miesięcy. Automatyzacja pozwoliła nam obsłużyć 10x więcej zamówień tym samym zespołem."
+                    </blockquote>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">MK</div>
+                        <div class="author-info">
+                            <div class="author-name">Marek Kowalski</div>
+                            <div class="author-position">CEO, AutoParts24</div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                    </div>
+                    <blockquote class="testimonial-text">
+                        "Jako sklep odzieżowy musieliśmy zarządzać tysiącami wariantów. MassTrade zautomatyzował ten proces i oszczędza nam 30 godzin tygodniowo."
+                    </blockquote>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">AN</div>
+                        <div class="author-info">
+                            <div class="author-name">Anna Nowak</div>
+                            <div class="author-position">Właścicielka, FashionHub</div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                    </div>
+                    <blockquote class="testimonial-text">
+                        "Przejście z ręcznego zarządzania na MassTrade było najlepszą decyzją. System jest intuicyjny, a wsparcie techniczne - na najwyższym poziomie."
+                    </blockquote>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">PW</div>
+                        <div class="author-info">
+                            <div class="author-name">Piotr Wiśniewski</div>
+                            <div class="author-position">Manager, ElektroMax</div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Najczęściej Zadawane Pytania</h2>
+                <p class="section-subtitle">Wszystko co musisz wiedzieć o MassTrade</p>
+            </div>
+
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>Jak szybko mogę zacząć sprzedawać?</span>
+                        <svg class="faq-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Po rejestracji i połączeniu kont możesz rozpocząć wystawianie ofert w ciągu 15-30 minut. Oferujemy też bezpłatną pomoc w wdrożeniu dla nowych użytkowników.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>Czy jest limit ofert w planie Standard?</span>
+                        <svg class="faq-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Nie! Wszystkie nasze plany oferują nielimitowaną liczbę ofert. Płacisz tylko za dostęp do platformy, nie za liczbę wystawionych produktów.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>Czy mogę importować oferty z Excel?</span>
+                        <svg class="faq-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Tak! MassTrade obsługuje import z plików CSV, Excel (XLSX) oraz poprzez API. Możesz także korzystać z naszych gotowych szablonów.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        <span>Co się stanie po zakończeniu okresu próbnego?</span>
+                        <svg class="faq-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Po 14 dniach możesz wybrać plan i kontynuować, lub zrezygnować bez żadnych kosztów. Twoje dane pozostaną w systemie przez 30 dni na wypadek powrotu.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" id="demo">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">Zacznij Zwiększać Sprzedaż Już Dziś</h2>
+                <p class="cta-subtitle">Dołącz do setek zadowolonych sprzedawców. 14 dni za darmo, bez karty kredytowej.</p>
+                <div class="cta-buttons">
+                    <a href="https://masstrade.pl/register" class="btn-primary btn-large">Rozpocznij za darmo</a>
+                    <a href="index.html#kontakt" class="btn-outline-light btn-large">Umów prezentację</a>
+                </div>
+                <p class="cta-note">✓ Pełny dostęp do wszystkich funkcji &nbsp; ✓ Wsparcie techniczne &nbsp; ✓ Anuluj w każdej chwili</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="kontakt">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3 class="footer-title">AXL Dynamics</h3>
+                    <p class="footer-description">
+                        Tworzymy nowoczesne rozwiązania technologiczne dla e-commerce, które pomagają firmom rozwijać sprzedaż wielokanałową.
+                    </p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="LinkedIn">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/>
+                                <circle cx="4" cy="4" r="2"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h4 class="footer-heading">Produkty</h4>
+                    <ul class="footer-links">
+                        <li><a href="masstrade.html">MassTrade</a></li>
+                        <li><a href="masstrade.html#migratory">Migratory</a></li>
+                        <li><a href="masstrade.html#integrator">Integrator</a></li>
+                        <li><a href="pricing.html">Cennik</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4 class="footer-heading">Firma</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html#o-nas">O nas</a></li>
+                        <li><a href="index.html#kontakt">Kontakt</a></li>
+                        <li><a href="#">Kariera</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4 class="footer-heading">Wsparcie</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Dokumentacja</a></li>
+                        <li><a href="#">Pomoc techniczna</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Status systemu</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4 class="footer-heading">Legal</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Regulamin</a></li>
+                        <li><a href="#">Polityka prywatności</a></li>
+                        <li><a href="#">RODO</a></li>
+                        <li><a href="#">Cookies</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p class="footer-copyright">
+                    © 2025 AXL Dynamics. Wszystkie prawa zastrzeżone.
+                </p>
+                <p class="footer-company-info">
+                    AXL Dynamics Sp. z o.o. | NIP: 1234567890 | KRS: 0000123456
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

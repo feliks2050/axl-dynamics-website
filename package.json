@@ -1,0 +1,22 @@
+{
+  "name": "axl-dynamics-website",
+  "version": "1.0.0",
+  "description": "Modern website for AXL Dynamics with MassTrade landing page - implementing 2025 web design best practices",
+  "main": "index.html",
+  "scripts": {
+    "start": "python3 -m http.server 8000",
+    "serve": "python3 -m http.server 8000"
+  },
+  "keywords": [
+    "ecommerce",
+    "multi-channel",
+    "saas",
+    "masstrade",
+    "allegro",
+    "olx",
+    "ebay"
+  ],
+  "author": "AXL Dynamics",
+  "license": "UNLICENSED",
+  "private": true
+}
