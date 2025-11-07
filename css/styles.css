@@ -433,61 +433,39 @@ a:hover {
     margin-bottom: var(--spacing-xl);
 }
 
-.platforms-logos {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-    gap: var(--spacing-md);
+.platforms-hub {
     max-width: 1000px;
     margin: 0 auto;
+    padding: var(--spacing-md);
 }
 
-.platform-logo {
-    background: var(--color-white);
-    font-weight: 700;
-    font-size: 1rem;
-    color: var(--color-neutral-dark);
-    padding: var(--spacing-md) var(--spacing-lg);
-    border-radius: var(--radius-md);
-    border: 2px solid rgba(0, 0, 0, 0.06);
-    text-align: center;
-    transition: all var(--transition-base);
-    cursor: default;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-    position: relative;
-    overflow: hidden;
-}
-
-.platform-logo::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
+.integration-diagram {
     width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 107, 53, 0.1), transparent);
-    transition: left 0.5s ease;
+    height: auto;
+    filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.08));
 }
 
-.platform-logo:hover::before {
-    left: 100%;
+.platform-node {
+    transition: all 0.3s ease;
+    cursor: default;
 }
 
-.platform-logo:hover {
-    color: var(--color-primary);
-    border-color: var(--color-primary);
-    transform: translateY(-4px);
-    box-shadow: 0 8px 24px rgba(255, 107, 53, 0.15);
+.platform-node:hover rect {
+    filter: drop-shadow(0 6px 16px rgba(0, 0, 0, 0.15));
+    transform: translateY(-2px);
+}
+
+.platform-node:hover {
+    transform: scale(1.05);
 }
 
 @media (max-width: 767px) {
-    .platforms-logos {
-        grid-template-columns: repeat(2, 1fr);
-        gap: var(--spacing-sm);
+    .platforms-hub {
+        padding: var(--spacing-sm);
     }
     
-    .platform-logo {
-        font-size: 0.9375rem;
-        padding: var(--spacing-sm) var(--spacing-md);
+    .integration-diagram {
+        max-height: 400px;
     }
 }
 
