@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Przewodnik szybkiego startu z MassTrade - pierwsze kroki w systemie sprzedaży wielokanałowej">
+    <title>Przewodnik Szybkiego Startu | MassTrade - AXL Dynamics</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="index.html" class="logo">
+                    <span class="logo-text">AXL</span><span class="logo-accent">Dynamics</span>
+                </a>
+                <button class="mobile-menu-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+                <ul class="nav-menu">
+                    <li><a href="index.html#produkty">Produkty</a></li>
+                    <li><a href="masstrade.html">MassTrade</a></li>
+                    <li><a href="masstrade.html#dokumentacja">Dokumentacja</a></li>
+                    <li><a href="projekty.html">Projekty</a></li>
+                    <li><a href="pricing.html">Cennik</a></li>
+                    <li><a href="index.html#integracje">Integracje</a></li>
+                    <li><a href="index.html#kontakt">Kontakt</a></li>
+                    <li><a href="https://masstrade.pl" class="btn-secondary">Zaloguj</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero feature-hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="breadcrumb">
+                    <a href="index.html">Strona główna</a> / <a href="masstrade.html">MassTrade</a> / Szybki start
+                </div>
+                <h1 class="hero-title">🚀 Przewodnik <span class="highlight">Szybkiego Startu</span></h1>
+                <p class="hero-subtitle">Rozpocznij sprzedaż wielokanałową w 5 prostych krokach</p>
+            </div>
+        </div>
+    </header>
+
+    <section class="content-section">
+        <div class="container">
+            <div class="content-layout">
+                <article class="main-content">
+                    <h2>Pierwsze kroki z MassTrade</h2>
+                    <p>Ten przewodnik przeprowadzi Cię przez proces konfiguracji MassTrade i pomoże rozpocząć sprzedaż na wielu platformach w mniej niż 30 minut.</p>
+
+                    <div class="workflow-steps" style="margin-top: 3rem;">
+                        <div class="workflow-step">
+                            <div class="step-number">1</div>
+                            <h3>Rejestracja i logowanie</h3>
+                            <p><strong>Czas: 2-3 minuty</strong></p>
+                            <ul class="feature-list">
+                                <li>Zarejestruj się na <a href="https://masstrade.pl/register" target="_blank">masstrade.pl/register</a></li>
+                                <li>Potwierdź adres email (sprawdź folder spam)</li>
+                                <li>Zaloguj się do panelu MassTrade</li>
+                                <li>Otrzymasz 14-dniowy pełny dostęp bez karty kredytowej</li>
+                            </ul>
+                        </div>
+
+                        <div class="workflow-step">
+                            <div class="step-number">2</div>
+                            <h3>Podłączenie pierwszej platformy</h3>
+                            <p><strong>Czas: 5-10 minut</strong></p>
+                            <ul class="feature-list">
+                                <li>Przejdź do <strong>Ustawienia → Kanały sprzedaży</strong></li>
+                                <li>Wybierz platformę (np. Allegro, OLX, eBay)</li>
+                                <li>Kliknij "Połącz" i zaloguj się do swojego konta na platformie</li>
+                                <li>Autoryzuj dostęp dla MassTrade (bezpieczne OAuth2)</li>
+                                <li>System automatycznie pobierze Twoje istniejące oferty</li>
+                            </ul>
+                            <div class="cta-box" style="margin-top: 1rem;">
+                                <p><strong>💡 Wskazówka:</strong> Zacznij od jednej platformy, na której masz najwięcej ofert. Dodanie kolejnych zajmie tylko kilka minut.</p>
+                            </div>
+                        </div>
+
+                        <div class="workflow-step">
+                            <div class="step-number">3</div>
+                            <h3>Import produktów do PIM</h3>
+                            <p><strong>Czas: 5-10 minut</strong></p>
+                            <ul class="feature-list">
+                                <li>Przejdź do <strong>PIM → Produkty</strong></li>
+                                <li>Kliknij "Importuj" i wybierz źródło:
+                                    <ul style="margin-left: 2rem; margin-top: 0.5rem;">
+                                        <li><strong>Z platformy</strong> - pobierz istniejące oferty</li>
+                                        <li><strong>Z pliku CSV/Excel</strong> - zaimportuj z arkusza</li>
+                                        <li><strong>Ręcznie</strong> - dodaj pojedyncze produkty</li>
+                                    </ul>
+                                </li>
+                                <li>System automatycznie przypisze kategorie i cechy</li>
+                                <li>Możesz edytować masowo wiele produktów jednocześnie</li>
+                            </ul>
+                        </div>
+
+                        <div class="workflow-step">
+                            <div class="step-number">4</div>
+                            <h3>Konfiguracja automatyzacji</h3>
+                            <p><strong>Czas: 5-10 minut</strong></p>
+                            <ul class="feature-list">
+                                <li><strong>Synchronizacja stanów:</strong> Ustawienia → Automatyzacja → Włącz synchronizację magazynu</li>
+                                <li><strong>Reguły cenowe:</strong> Ustaw marże dla różnych platform (np. +10% na Allegro)</li>
+                                <li><strong>Automatyczne zatrzymywanie:</strong> Oferty zatrzymają się gdy stan = 0</li>
+                                <li><strong>Automatyczne wznawianie:</strong> Oferty wrócą gdy uzupełnisz magazyn</li>
+                            </ul>
+                        </div>
+
+                        <div class="workflow-step">
+                            <div class="step-number">5</div>
+                            <h3>Wystawianie ofert</h3>
+                            <p><strong>Czas: 5-10 minut</strong></p>
+                            <ul class="feature-list">
+                                <li>Przejdź do <strong>Aukcje → Nowa oferta</strong></li>
+                                <li>Wybierz produkty z PIM (możesz zaznaczyć wiele)</li>
+                                <li>Wybierz platformę docelową</li>
+                                <li>Wybierz szablon opisu (lub stwórz nowy)</li>
+                                <li>Ustaw cenę i stan magazynowy</li>
+                                <li>Kliknij "Wystaw" - gotowe! 🎉</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <h2 style="margin-top: 4rem;">Co dalej?</h2>
+                    <div class="features-grid" style="margin-top: 2rem;">
+                        <div class="feature-card">
+                            <div class="feature-icon">📦</div>
+                            <h3 class="feature-title">Podłącz przewoźnika</h3>
+                            <p class="feature-description">Automatyzuj generowanie etykiet - przejdź do Ustawienia → Przewoźnicy</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">📊</div>
+                            <h3 class="feature-title">Skonfiguruj raporty</h3>
+                            <p class="feature-description">Włącz automatyczne raporty sprzedaży - Raporty → Harmonogram</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">🔗</div>
+                            <h3 class="feature-title">Integracja z ERP</h3>
+                            <p class="feature-description">Połącz z Subiekt/Enova - Ustawienia → Integracje</p>
+                        </div>
+                    </div>
+
+                    <div class="cta-box" style="margin-top: 3rem;">
+                        <h3>Potrzebujesz pomocy?</h3>
+                        <p>Nasz zespół jest dostępny od poniedziałku do piątku 9:00-17:00</p>
+                        <div style="display: flex; gap: 1rem; margin-top: 1rem; flex-wrap: wrap;">
+                            <a href="https://axldynamics.atlassian.net/wiki/spaces/DOK" target="_blank" class="btn-primary">Pełna dokumentacja</a>
+                            <a href="https://chatgpt.com/g/g-9T4naBoGr-asystent-ai-dokumentacji-masstrade" target="_blank" class="btn-outline">Asystent AI</a>
+                            <a href="https://axldynamics.atlassian.net/servicedesk/customer/portal/3" target="_blank" class="btn-outline">Service Desk</a>
+                        </div>
+                    </div>
+                </article>
+
+                <aside class="sidebar">
+                    <div class="sidebar-card">
+                        <h3>⏱️ Szybki przegląd</h3>
+                        <ul class="related-features">
+                            <li><strong>Całkowity czas:</strong> 20-30 minut</li>
+                            <li><strong>Trudność:</strong> Łatwa</li>
+                            <li><strong>Wymagania:</strong> Konto na platformie sprzedażowej</li>
+                        </ul>
+                    </div>
+
+                    <div class="sidebar-card">
+                        <h3>📹 Materiały wideo</h3>
+                        <p>Obejrzyj filmy instruktażowe w dokumentacji Confluence</p>
+                        <a href="https://axldynamics.atlassian.net/wiki/spaces/DOK" target="_blank" class="btn-outline">Zobacz wideo</a>
+                    </div>
+
+                    <div class="sidebar-card">
+                        <h3>🎯 Powiązane tematy</h3>
+                        <ul class="related-features">
+                            <li><a href="features/pim.html">Moduł PIM</a></li>
+                            <li><a href="features/aukcje-oferty.html">Aukcje i oferty</a></li>
+                            <li><a href="features/automatyzacja.html">Automatyzacja</a></li>
+                        </ul>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>AXL Dynamics</h4>
+                    <p>Nowoczesne technologie dla e-commerce</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Szybkie linki</h4>
+                    <ul>
+                        <li><a href="index.html">Strona główna</a></li>
+                        <li><a href="masstrade.html">MassTrade</a></li>
+                        <li><a href="pricing.html">Cennik</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 AXL Dynamics. Wszelkie prawa zastrzeżone.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
