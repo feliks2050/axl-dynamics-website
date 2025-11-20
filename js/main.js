@@ -273,6 +273,29 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
+    // ===== Getting Started Tabs =====
+    const tabButtons = document.querySelectorAll('.tab-button');
+    const tabContents = document.querySelectorAll('.tab-content');
+    
+    tabButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const targetTab = this.getAttribute('data-tab');
+            
+            // Remove active class from all buttons and contents
+            tabButtons.forEach(btn => btn.classList.remove('active'));
+            tabContents.forEach(content => content.classList.remove('active'));
+            
+            // Add active class to clicked button
+            this.classList.add('active');
+            
+            // Show corresponding tab content
+            const targetContent = document.getElementById(targetTab);
+            if (targetContent) {
+                targetContent.classList.add('active');
+            }
+        });
+    });
+    
     // ===== Console Message =====
     console.log('%c🚀 AXL Dynamics Website', 'font-size: 20px; font-weight: bold; color: #FF6B35;');
     console.log('%cBuilt with modern web technologies', 'font-size: 12px; color: #004E89;');

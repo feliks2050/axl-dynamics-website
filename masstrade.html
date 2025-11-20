@@ -29,6 +29,7 @@
                 <ul class="nav-menu">
                     <li><a href="index.html#produkty">Produkty</a></li>
                     <li><a href="masstrade.html">MassTrade</a></li>
+                    <li><a href="#pierwsze-kroki">Pierwsze kroki</a></li>
                     <li><a href="#dokumentacja">Dokumentacja</a></li>
                     <li><a href="projekty.html">Projekty</a></li>
                     <li><a href="pricing.html">Cennik</a></li>
@@ -492,6 +493,661 @@
                         </div>
                     </div>
                 </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Getting Started Section -->
+    <section class="getting-started-section" id="pierwsze-kroki">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Pierwsze Kroki w Systemie MassTrade</h2>
+                <p class="section-subtitle">Kompleksowy przewodnik wdrożenia i codziennej pracy z systemem</p>
+            </div>
+
+            <!-- Main Navigation Tabs -->
+            <div class="getting-started-tabs">
+                <button class="tab-button active" data-tab="podstawowa-konfiguracja">Podstawowa konfiguracja</button>
+                <button class="tab-button" data-tab="produkty-oferty">Produkty i oferty</button>
+                <button class="tab-button" data-tab="integracje-konfiguracja">Integracje</button>
+                <button class="tab-button" data-tab="scenariusze-operacyjne">Scenariusze operacyjne</button>
+                <button class="tab-button" data-tab="automatyzacje">Automatyzacje</button>
+                <button class="tab-button" data-tab="raportowanie">Raportowanie</button>
+                <button class="tab-button" data-tab="bezpieczenstwo">Bezpieczeństwo</button>
+                <button class="tab-button" data-tab="b2b">Funkcje B2B</button>
+                <button class="tab-button" data-tab="checklist">Checklist wdrożeniowy</button>
+            </div>
+
+            <!-- Tab Content -->
+            <div class="tab-content-wrapper">
+                
+                <!-- Tab 1: Podstawowa Konfiguracja -->
+                <div class="tab-content active" id="podstawowa-konfiguracja">
+                    <h3 class="content-section-title">1️⃣ Podstawowa Konfiguracja Systemu</h3>
+                    
+                    <div class="content-block">
+                        <h4>🏢 Konfiguracja danych firmy</h4>
+                        <ul class="content-list">
+                            <li><strong>Ustawienia → Firma:</strong> Wprowadź NIP, REGON, KRS, adres siedziby</li>
+                            <li><strong>Logo firmy:</strong> Format PNG/JPG, zalecany rozmiar 300×100 px</li>
+                            <li><strong>Dane kontaktowe:</strong> E-mail, telefon, strona WWW (pojawiają się na fakturach i mailach)</li>
+                            <li><strong>Numeracja dokumentów:</strong> Prefiks i wzór (np. FV/{YYYY}/{MM}/{NNN})</li>
+                        </ul>
+                    </div>
+
+                    <div class="content-block">
+                        <h4>👤 Zarządzanie użytkownikami</h4>
+                        <ul class="content-list">
+                            <li><strong>Administrator:</strong> Pełny dostęp do wszystkich funkcji</li>
+                            <li><strong>Operator zamówień:</strong> Dostęp do zamówień, faktur, bez konfiguracji</li>
+                            <li><strong>Magazynier:</strong> Dostęp do magazynu, kompletacji, bez dostępu do finansów</li>
+                            <li><strong>Księgowość:</strong> Dostęp do dokumentów finansowych, tylko odczyt magazynu</li>
+                            <li><strong>Analityk:</strong> Dostęp do raportów i eksportów, tylko odczyt</li>
+                        </ul>
+                        <p class="content-note">💡 <strong>Wskazówka:</strong> Każdy użytkownik powinien mieć unikalny login. Stosuj zasadę minimalnych uprawnień.</p>
+                    </div>
+
+                    <div class="content-block">
+                        <h4>📦 Tworzenie magazynów</h4>
+                        <ul class="content-list">
+                            <li><strong>Magazyn główny:</strong> Podstawowy magazyn z produktami</li>
+                            <li><strong>Magazyn dostawcy:</strong> Produkty dostępne u dostawcy (dropshipping)</li>
+                            <li><strong>Magazyn zwrotów:</strong> Oddzielna przestrzeń na reklamacje i zwroty</li>
+                            <li><strong>Lokalizacje:</strong> Struktura regał-półka-pozycja (np. A1-02-03)</li>
+                        </ul>
+                        <p class="content-note">💡 <strong>Wskazówka:</strong> Zaplanuj strukturę lokalizacji przed etykietowaniem fizycznym.</p>
+                    </div>
+
+                    <div class="content-block">
+                        <h4>💰 Konfiguracja VAT i metod płatności</h4>
+                        <ul class="content-list">
+                            <li><strong>Stawki VAT:</strong> 23%, 8%, 5%, 0%, zw. (definiowane w systemie)</li>
+                            <li><strong>Metody płatności:</strong> Przelew, karta, BLIK, gotówka, za pobraniem</li>
+                            <li><strong>Integracje płatności:</strong> PayU, Przelewy24, Stripe, PayPal</li>
+                            <li><strong>Waluty:</strong> Główna PLN, dodatkowe: EUR, USD, GBP</li>
+                        </ul>
+                    </div>
+
+                    <div class="content-block">
+                        <h4>📋 Statusy zamówień</h4>
+                        <ul class="content-list">
+                            <li><strong>Nowe:</strong> Zamówienie otrzymane, oczekuje na płatność</li>
+                            <li><strong>Opłacone:</strong> Płatność potwierdzona, gotowe do realizacji</li>
+                            <li><strong>Do realizacji:</strong> Przekazane do kompletacji</li>
+                            <li><strong>W kompletacji:</strong> Produkty są pobierane z magazynu</li>
+                            <li><strong>Spakowane:</strong> Zamówienie spakowane, czeka na wysyłkę</li>
+                            <li><strong>Wysłane:</strong> Przekazane kurierowi z numerem trackingowym</li>
+                            <li><strong>Dostarczone:</strong> Odebrane przez klienta</li>
+                            <li><strong>Anulowane:</strong> Anulowane przez klienta lub system</li>
+                            <li><strong>Zwrot:</strong> Proces zwrotu rozpoczęty</li>
+                        </ul>
+                        <p class="content-note">⚠️ <strong>Ważne:</strong> Mapuj statusy z kanałów sprzedaży na te systemowe.</p>
+                    </div>
+
+                    <div class="content-block">
+                        <h4>📧 Powiadomienia e-mail</h4>
+                        <ul class="content-list">
+                            <li>Konfiguracja SMTP (np. Gmail, SendGrid, własny serwer)</li>
+                            <li>Szablony maili: potwierdzenie zamówienia, wysyłka, faktura</li>
+                            <li>Automatyczne powiadomienia o zmianach statusu</li>
+                            <li>Alerty o niskich stanach magazynowych</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Tab 2: Produkty i Oferty -->
+                <div class="tab-content" id="produkty-oferty">
+                    <h3 class="content-section-title">2️⃣ Zarządzanie Produktami i Ofertami</h3>
+                    
+                    <div class="content-block">
+                        <h4>📦 Import produktów</h4>
+                        <ul class="content-list">
+                            <li><strong>CSV/Excel:</strong> Szablon z kolumnami SKU, EAN, nazwa, cena, kategoria, producent</li>
+                            <li><strong>API:</strong> Integracja REST dla programistów</li>
+                            <li><strong>Masowy import zdjęć:</strong> FTP lub ZIP z odpowiednim nazewnictwem</li>
+                            <li><strong>Import z BaseLinker:</strong> Automatyczna synchronizacja katalogów</li>
+                        </ul>
+                        <p class="content-note">💡 <strong>Wskazówka:</strong> SKU i EAN muszą być unikalne w systemie.</p>
+                    </div>
+
+                    <div class="content-block">
+                        <h4>🏷️ Struktura produktu</h4>
+                        <ul class="content-list">
+                            <li><strong>SKU:</strong> Unikalny identyfikator wewnętrzny</li>
+                            <li><strong>EAN/GTIN:</strong> Kod kreskowy międzynarodowy</li>
+                            <li><strong>Nazwa i opis:</strong> Tytuł oraz szczegółowy opis HTML</li>
+                            <li><strong>Kategoria:</strong> Przypisanie do drzewa kategorii</li>
+                            <li><strong>Producent:</strong> Marka produktu</li>
+                            <li><strong>Cechy/Atrybuty:</strong> Parametry techniczne (kolor, rozmiar, materiał)</li>
+                            <li><strong>Zdjęcia:</strong> Główne i galeria (max 8-12 zdjęć)</li>
+                            <li><strong>Waga i wymiary:</strong> Do kalkulacji kosztów wysyłki</li>
+                            <li><strong>Ceny:</strong> Zakupu, sprzedaży, promocyjna (z przedziałem dat)</li>
+                        </ul>
+                    </div>
+
+                    <div class="content-block">
+                        <h4>🎨 Warianty produktów</h4>
+                        <p>Dla produktów z wariantami (np. odzież):</p>
+                        <ul class="content-list">
+                            <li>Produkt główny zawiera wspólne dane (opis, zdjęcia)</li>
+                            <li>Warianty mają unikalne SKU, EAN, cenę, stan magazynowy</li>
+                            <li>Obsługa macierzy wariantów (rozmiar × kolor)</li>
+                            <li>Automatyczne generowanie kombinacji</li>
+                        </ul>
+                    </div>
+
+                    <div class="content-block">
+                        <h4>📋 Wystawianie ofert</h4>
+                        <ul class="content-list">
+                            <li><strong>Pojedynczo:</strong> Produkty → Wystawianie → Wybierz kanał</li>
+                            <li><strong>Masowo:</strong> Zaznacz wiele produktów → Operacje masowe → Wystaw</li>
+                            <li><strong>Szablony ofert:</strong> Predefiniowane wzorce (układ, CSS, polityki)</li>
+                            <li><strong>Kategorie per kanał:</strong> Automatyczne mapowanie kategorii systemowych na kategorie Allegro/OLX</li>
+                            <li><strong>Polityki sprzedaży:</strong> Dostawa, zwroty, gwarancja (przypisane do ofert)</li>
+                        </ul>
+                    </div>
+
+                    <div class="content-block">
+                        <h4>💵 Zarządzanie cenami</h4>
+                        <ul class="content-list">
+                            <li>Możliwość różnych cen per kanał (Allegro, OLX, własny sklep)</li>
+                            <li>Automatyczne przeliczanie marży</li>
+                            <li>Promocje czasowe z datą start/koniec</li>
+                            <li>Algorytmy repricingowe (opcjonalnie)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Tab 3: Integracje -->
+                <div class="tab-content" id="integracje-konfiguracja">
+                    <h3 class="content-section-title">3️⃣ Konfiguracja Integracji</h3>
+                    
+                    <div class="content-block">
+                        <h4>🛒 Allegro</h4>
+                        <ol class="content-list">
+                            <li>Ustawienia → Integracje → Allegro</li>
+                            <li>Kliknij "Połącz z Allegro" → autoryzacja OAuth</li>
+                            <li>Wybierz sandbox (testowy) lub produkcyjny</li>
+                            <li>Ustaw interwał synchronizacji (np. 15 min)</li>
+                            <li>Mapowanie kategorii: przypisz kategorie systemowe do kategorii Allegro</li>
+                            <li>Test: wystaw testową ofertę → sprawdź, czy pojawia się na Allegro</li>
+                        </ol>
+                        <p class="content-note">⚠️ <strong>Uwaga:</strong> Wymaga konta Allegro Firma oraz aktywnego REST API.</p>
+                    </div>
+
+                    <div class="content-block">
+                        <h4>📦 OLX</h4>
+                        <ol class="content-list">
+                            <li>Wygeneruj token API w OLX Business</li>
+                            <li>MassTrade → Integracje → OLX → wprowadź token</li>
+                            <li>Wybierz lokalizację domyślną (miasto wyświetlane w ogłoszeniach)</li>
+                            <li>Mapowanie kategorii OLX</li>
+                            <li>Test wystawienia pojedynczej oferty</li>
+                        </ol>
+                    </div>
+
+                    <div class="content-block">
+                        <h4>🌍 BaseLinker</h4>
+                        <ul class="content-list">
+                            <li>Pobierz token API z BaseLinker</li>
+                            <li>MassTrade → Integracje → BaseLinker → Token API</li>
+                            <li>Wybierz magazyny do synchronizacji (inwentarze BaseLinker)</li>
+                            <li>Ustal kierunek synchronizacji: MassTrade → BL lub dwukierunkowa</li>
+                            <li>Automatyczna synchronizacja stanów, cen i zamówień</li>
+                        </ul>
+                    </div>
+
+                    <div class="content-block">
+                        <h4>🚚 Integracje z kurierami</h4>
+                        <div class="courier-table">
+                            <h5>InPost</h5>
+                            <ul>
+                                <li>Token API + ID organizacji</li>
+                                <li>ID paczkomatu nadawczego</li>
+                                <li>Etykiety PDF/ZPL, statusy przesyłek, zwroty</li>
+                            </ul>
+
+                            <h5>DPD</h5>
+                            <ul>
+                                <li>Numer klienta, login, hasło</li>
+                                <li>Typ paczki (kurier, pickup)</li>
+                                <li>Etykiety, pickup, śledzenie</li>
+                            </ul>
+
+                            <h5>DHL</h5>
+                            <ul>
+                                <li>API Key + numer konta</li>
+                                <li>Etykiety, manifest, generacja CSV</li>
+                            </ul>
+
+                            <h5>GLS</h5>
+                            <ul>
+                                <li>Kod klienta + hasło</li>
+                                <li>Etykiety, statusy, zwroty</li>
+                            </ul>
+                        </div>
+                        <p class="content-note">💡 <strong>Wskazówka:</strong> Testuj integracje na pojedynczych przesyłkach przed uruchomieniem automatyzacji.</p>
+                    </div>
+
+                    <div class="content-block">
+                        <h4>📄 Systemy ERP</h4>
+                        <ul class="content-list">
+                            <li><strong>Subiekt GT/nexo:</strong> Synchronizacja stanów, eksport faktur</li>
+                            <li><strong>Enova:</strong> Import produktów, synchronizacja dokumentów</li>
+                            <li><strong>PolkaSQL/Edinet:</strong> Własne mapowanie pól</li>
+                            <li><strong>CSV/XLSX:</strong> Regularne eksporty dla systemów księgowych</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Tab 4: Scenariusze Operacyjne -->
+                <div class="tab-content" id="scenariusze-operacyjne">
+                    <h3 class="content-section-title">4️⃣ Scenariusze Operacyjne (End-to-End)</h3>
+                    
+                    <div class="content-block">
+                        <h4>🟩 A. Przyjęcie dostawy od dostawcy (PZ)</h4>
+                        <ol class="content-list">
+                            <li><strong>Utwórz awizo dostawy (ZD):</strong> Magazyn → Zamówienia do dostawców → Nowe</li>
+                            <li>Wybierz dostawcę, produkty, ilości, ceny, termin dostawy</li>
+                            <li><strong>Odbiór fizyczny:</strong> Przyjęcie (PZ) → "Na podstawie ZD"</li>
+                            <li>System porównuje ilości z ZD (zgodność, nadwyżka, braki)</li>
+                            <li><strong>Kontrola jakości:</strong> Możliwość kwarantanny (status "oczekuje na zatwierdzenie")</li>
+                            <li><strong>Zatwierdzenie PZ:</strong> Towar trafia na stan magazynu</li>
+                            <li><strong>Etykietowanie:</strong> Generowanie kodów kreskowych SKU lub lokalizacji</li>
+                        </ol>
+                    </div>
+
+                    <div class="content-block">
+                        <h4>🟦 B. Kompletacja i pakowanie zamówienia</h4>
+                        <ol class="content-list">
+                            <li>Zamówienie ma status "Do realizacji" → automatyczna rezerwacja stanu</li>
+                            <li><strong>Operator w magazynie:</strong> Magazyn → Kompletacje</li>
+                            <li>Wybierz tryb:
+                                <ul>
+                                    <li><strong>Single picking:</strong> Pojedyncze zamówienie</li>
+                                    <li><strong>Batch picking:</strong> Zbiorcze</li>
+                                    <li><strong>Wave picking:</strong> Fale realizacyjne (wg kuriera/regionu)</li>
+                                </ul>
+                            </li>
+                            <li><strong>Druk listy pobrań:</strong> Pick list lub praca ze skanerem</li>
+                            <li>Zeskanuj: lokalizacja → produkt → potwierdź ilość</li>
+                            <li><strong>Pakowanie:</strong> Pakownia → Nowa paczka → przypisz zamówienie</li>
+                            <li>System proponuje kuriera wg reguł (waga, region)</li>
+                            <li><strong>Druk etykiety:</strong> Format ZPL/PDF</li>
+                            <li><strong>Zamknięcie:</strong> Wygenerowanie WZ, status → "Wysłane"</li>
+                            <li>Synchronizacja z marketplace + numer śledzenia</li>
+                        </ol>
+                    </div>
+
+                    <div class="content-block">
+                        <h4>🟨 C. Zwroty i reklamacje (RMA)</h4>
+                        <ol class="content-list">
+                            <li><strong>Zgłoszenie klienta:</strong> Rejestracja przez panel B2B lub ręcznie</li>
+                            <li><strong>Nadanie numeru RMA:</strong> Przypisanie do zamówienia</li>
+                            <li><strong>Przyjęcie zwrotu (PW):</strong> Towar trafia do magazynu "Zwroty"</li>
+                            <li><strong>Decyzja:</strong> Wymiana, zwrot pieniędzy lub odrzucenie</li>
+                            <li>System generuje korektę faktury (KOR) lub nowy dokument przy wymianie</li>
+                            <li><strong>Refundacja:</strong> Powiązanie z systemem płatności (PayU, Przelewy24)</li>
+                        </ol>
+                    </div>
+
+                    <div class="content-block">
+                        <h4>🟧 D. Inwentaryzacja</h4>
+                        <div>
+                            <h5>Rodzaje inwentaryzacji:</h5>
+                            <ul>
+                                <li><strong>Pełna:</strong> Wszystkie lokalizacje (na koniec roku)</li>
+                                <li><strong>Cykliczna:</strong> Wybrane grupy produktów (metoda ABC)</li>
+                                <li><strong>Ad hoc:</strong> Korekta po błędzie</li>
+                            </ul>
+
+                            <h5>Procedura:</h5>
+                            <ol>
+                                <li>Magazyn → Inwentaryzacja → Nowa lista</li>
+                                <li>Generowanie listy pozycji do liczenia</li>
+                                <li>Wprowadzanie odczytów (terminal/smartfon lub ręcznie)</li>
+                                <li>Porównanie z systemem → dokument PW/RW dla różnic</li>
+                                <li>Zamknięcie i synchronizacja z ERP</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab 5: Automatyzacje -->
+                <div class="tab-content" id="automatyzacje">
+                    <h3 class="content-section-title">5️⃣ Automatyzacje i Reguły</h3>
+                    
+                    <div class="content-block">
+                        <h4>📜 Typy wyzwalaczy automatycznych</h4>
+                        <ul class="content-list">
+                            <li><strong>On Order Created:</strong> Nowe zamówienie z kanału</li>
+                            <li><strong>On Payment Received:</strong> Płatność potwierdzona</li>
+                            <li><strong>On Stock Changed:</strong> Zmiana ilości produktu</li>
+                            <li><strong>On Status Changed:</strong> Zmiana statusu zamówienia</li>
+                            <li><strong>On Time Event:</strong> Cyklicznie (np. co 30 min)</li>
+                        </ul>
+                    </div>
+
+                    <div class="content-block">
+                        <h4>⚙️ Przykładowe reguły automatyzacji</h4>
+                        <div class="automation-examples">
+                            <div class="automation-rule">
+                                <strong>Warunek:</strong> Zamówienie z Allegro + opłacone<br>
+                                <strong>Akcja:</strong> Zmień status → "Do realizacji", utwórz rezerwację
+                            </div>
+                            <div class="automation-rule">
+                                <strong>Warunek:</strong> Kurier = InPost i waga < 25kg<br>
+                                <strong>Akcja:</strong> Wygeneruj etykietę automatycznie
+                            </div>
+                            <div class="automation-rule">
+                                <strong>Warunek:</strong> Stock < min_stock<br>
+                                <strong>Akcja:</strong> Wyślij alert mailowy lub stwórz ZD do dostawcy
+                            </div>
+                            <div class="automation-rule">
+                                <strong>Warunek:</strong> Zamówienie status = "Wysłane" > 5 dni<br>
+                                <strong>Akcja:</strong> Zmień status → "Zamknięte"
+                            </div>
+                            <div class="automation-rule">
+                                <strong>Warunek:</strong> Zwrot z RMA zatwierdzony<br>
+                                <strong>Akcja:</strong> Utwórz dokument KOR
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="content-block">
+                        <h4>🔄 Kolejność i priorytety reguł</h4>
+                        <ul class="content-list">
+                            <li>Reguły wykonują się sekwencyjnie wg priorytetu</li>
+                            <li>Możliwość stosowania blokady kolizji (status nie może się cofnąć)</li>
+                            <li>Testy reguł na środowisku sandbox przed produkcją</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Tab 6: Raportowanie -->
+                <div class="tab-content" id="raportowanie">
+                    <h3 class="content-section-title">6️⃣ Raportowanie i Analityka</h3>
+                    
+                    <div class="content-block">
+                        <h4>📈 Kluczowe raporty operacyjne</h4>
+                        <div class="reports-grid">
+                            <div class="report-item">
+                                <h5>Sprzedaż</h5>
+                                <ul>
+                                    <li>Sprzedaż wg kanału</li>
+                                    <li>Sprzedaż wg produktu</li>
+                                    <li>Sprzedaż wg regionu</li>
+                                    <li>Analiza obrotu i marży</li>
+                                </ul>
+                            </div>
+                            <div class="report-item">
+                                <h5>Stany magazynowe</h5>
+                                <ul>
+                                    <li>Produkty poniżej minimum</li>
+                                    <li>Produkty z nadwyżką</li>
+                                    <li>Optymalizacja zapasów</li>
+                                    <li>Historia ruchów</li>
+                                </ul>
+                            </div>
+                            <div class="report-item">
+                                <h5>Logistyka</h5>
+                                <ul>
+                                    <li>Czas kompletacji</li>
+                                    <li>Czas wysyłki</li>
+                                    <li>Wskaźnik OTIF</li>
+                                    <li>Kontrola SLA magazynu</li>
+                                </ul>
+                            </div>
+                            <div class="report-item">
+                                <h5>Finanse</h5>
+                                <ul>
+                                    <li>Marża</li>
+                                    <li>Rabaty</li>
+                                    <li>Korekty</li>
+                                    <li>Analiza zyskowności</li>
+                                </ul>
+                            </div>
+                            <div class="report-item">
+                                <h5>Zwroty</h5>
+                                <ul>
+                                    <li>Zwroty wg przyczyny</li>
+                                    <li>Zwroty wg klienta</li>
+                                    <li>Wskaźnik jakości obsługi</li>
+                                    <li>Analiza RMA</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="content-block">
+                        <h4>🔢 KPI do śledzenia</h4>
+                        <ul class="content-list">
+                            <li><strong>Lead Time Order → Ship:</strong> Średni czas realizacji zamówienia</li>
+                            <li><strong>OTIF (On Time In Full):</strong> % zamówień wysłanych terminowo i kompletnie</li>
+                            <li><strong>Fill Rate:</strong> Odsetek pozycji zrealizowanych w całości</li>
+                            <li><strong>Stock Accuracy:</strong> Zgodność stanów fizycznych z systemowymi</li>
+                            <li><strong>Return Rate:</strong> Procent zwrotów od sprzedaży</li>
+                            <li><strong>GMV (Gross Merchandise Value):</strong> Całkowita wartość sprzedanych towarów</li>
+                            <li><strong>AOV (Average Order Value):</strong> Średnia wartość zamówienia</li>
+                        </ul>
+                        <p class="content-note">💡 <strong>Wskazówka:</strong> Ustaw dashboard dzienny dla operatora i tygodniowy dla kierownika.</p>
+                    </div>
+                </div>
+
+                <!-- Tab 7: Bezpieczeństwo -->
+                <div class="tab-content" id="bezpieczenstwo">
+                    <h3 class="content-section-title">7️⃣ Bezpieczeństwo i Zgodność (RODO)</h3>
+                    
+                    <div class="content-block">
+                        <h4>🔐 Dostęp i uprawnienia</h4>
+                        <ul class="content-list">
+                            <li><strong>RBAC (Role-Based Access Control):</strong> Każdy użytkownik tylko do swojego zakresu</li>
+                            <li>Dostęp do magazynów, integracji i raportów może być ograniczony</li>
+                            <li><strong>Logi aktywności:</strong> Zmiany danych, dokumentów, eksportów</li>
+                            <li>Historia działań użytkowników z timestampem</li>
+                        </ul>
+                    </div>
+
+                    <div class="content-block">
+                        <h4>🧩 Ochrona danych osobowych (RODO)</h4>
+                        <ul class="content-list">
+                            <li>Dane klientów (imię, adres, telefon) przetwarzane zgodnie z RODO</li>
+                            <li><strong>Anonimizacja:</strong> Możliwość automatycznej anonimizacji po okresie X dni</li>
+                            <li><strong>Eksport danych klienta:</strong> Na żądanie (prawo dostępu do danych)</li>
+                            <li><strong>Usunięcie danych:</strong> Realizacja "prawa do bycia zapomnianym"</li>
+                            <li>Zgody marketingowe rejestrowane w systemie</li>
+                        </ul>
+                    </div>
+
+                    <div class="content-block">
+                        <h4>💾 Kopie zapasowe i środowiska</h4>
+                        <ul class="content-list">
+                            <li><strong>Automatyczny backup bazy:</strong> Najczęściej co 24h</li>
+                            <li><strong>Środowisko testowe (sandbox):</strong> Do prób integracji bez ryzyka</li>
+                            <li><strong>Import konfiguracji:</strong> Z pliku JSON/CSV (słowniki, statusy)</li>
+                            <li>Możliwość przywrócenia danych z wybranego punktu</li>
+                        </ul>
+                    </div>
+
+                    <div class="content-block">
+                        <h4>🛡️ Diagnostyka i logi</h4>
+                        <ul class="content-list">
+                            <li><strong>Logi integracji:</strong> Integracje → Logi → Filtr wg kanału</li>
+                            <li><strong>Status API:</strong> Ustawienia → System → Monitor zadań</li>
+                            <li><strong>Błędy importu CSV:</strong> Plik z raportem błędów (linia, komunikat)</li>
+                            <li><strong>Alerty e-mail:</strong> Powiadomienia o błędach synchronizacji</li>
+                        </ul>
+                    </div>
+
+                    <div class="content-block">
+                        <h4>⚠️ Typowe komunikaty błędów</h4>
+                        <div class="error-codes">
+                            <div class="error-item">
+                                <strong>401 Unauthorized</strong><br>
+                                <span>Token wygasł → Odnów autoryzację</span>
+                            </div>
+                            <div class="error-item">
+                                <strong>409 Conflict</strong><br>
+                                <span>Duplikat SKU → Scal produkt</span>
+                            </div>
+                            <div class="error-item">
+                                <strong>422 Unprocessable Entity</strong><br>
+                                <span>Brak wymaganych pól → Uzupełnij dane produktu</span>
+                            </div>
+                            <div class="error-item">
+                                <strong>500 Internal Error</strong><br>
+                                <span>Błąd API kanału → Spróbuj ponownie / zgłoś wsparcie</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab 8: Funkcje B2B -->
+                <div class="tab-content" id="b2b">
+                    <h3 class="content-section-title">8️⃣ Funkcje B2B – Sprzedaż Hurtowa</h3>
+                    
+                    <div class="content-block">
+                        <h4>💼 Kluczowe funkcje dla hurtowni</h4>
+                        <div class="b2b-features">
+                            <div class="b2b-feature">
+                                <h5>💰 Cenniki indywidualne</h5>
+                                <p>Rabaty i ceny netto per klient lub grupa klientów. Możliwość ustawiania progów cenowych zależnych od ilości.</p>
+                            </div>
+                            <div class="b2b-feature">
+                                <h5>💳 Limity kredytowe</h5>
+                                <p>Blokada nowych zamówień przy przekroczeniu limitu kredytu kupieckiego. Monitoring zaległości płatniczych.</p>
+                            </div>
+                            <div class="b2b-feature">
+                                <h5>📋 Oferty handlowe / Proforma</h5>
+                                <p>Możliwość tworzenia ofert i ich przekształcania w zamówienia. Wersjonowanie ofert i tracking akceptacji.</p>
+                            </div>
+                            <div class="b2b-feature">
+                                <h5>📦 Magazyny dedykowane</h5>
+                                <p>Rezerwacja stanów tylko dla konkretnego kontrahenta. Zarządzanie konsygnacją.</p>
+                            </div>
+                            <div class="b2b-feature">
+                                <h5>📤 Import CSV zamówień</h5>
+                                <p>Klient B2B może wgrać własny plik z SKU i ilościami. Automatyczna walidacja dostępności.</p>
+                            </div>
+                            <div class="b2b-feature">
+                                <h5>🌐 Portal B2B</h5>
+                                <p>Klient widzi swoje ceny, zamówienia, dokumenty, stany magazynowe. Self-service dla hurtowników.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="content-block">
+                        <h4>👥 Grupy klientów B2B</h4>
+                        <ul class="content-list">
+                            <li><strong>VIP:</strong> Najniższe ceny, priorytetowa realizacja</li>
+                            <li><strong>Standard:</strong> Standardowe rabaty hurtowe</li>
+                            <li><strong>Nowy klient:</strong> Promocyjne warunki startowe</li>
+                            <li><strong>Rabaty progowe:</strong> Automatyczne rabaty przy przekroczeniu wartości/ilości</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Tab 9: Checklist Wdrożeniowy -->
+                <div class="tab-content" id="checklist">
+                    <h3 class="content-section-title">9️⃣ Go-Live – Checklist Wdrożeniowy</h3>
+                    
+                    <div class="content-block">
+                        <h4>✅ Lista kontrolna przed uruchomieniem produkcyjnym</h4>
+                        <div class="checklist">
+                            <div class="checklist-section">
+                                <h5>📋 Dane firmy</h5>
+                                <label><input type="checkbox"> Zweryfikowane NIP, REGON, KRS</label>
+                                <label><input type="checkbox"> Adres siedziby poprawny</label>
+                                <label><input type="checkbox"> Logo firmy wgrane (300×100px)</label>
+                                <label><input type="checkbox"> Dane kontaktowe (e-mail, telefon)</label>
+                            </div>
+
+                            <div class="checklist-section">
+                                <h5>📦 Magazyn</h5>
+                                <label><input type="checkbox"> Magazyn główny utworzony</label>
+                                <label><input type="checkbox"> Struktura lokalizacji zdefiniowana</label>
+                                <label><input type="checkbox"> Etykiety lokalizacji wydrukowane</label>
+                            </div>
+
+                            <div class="checklist-section">
+                                <h5>🏷️ Produkty</h5>
+                                <label><input type="checkbox"> SKU/EAN unikalne i poprawne</label>
+                                <label><input type="checkbox"> Import produktów zakończony</label>
+                                <label><input type="checkbox"> Zdjęcia produktów wgrane</label>
+                                <label><input type="checkbox"> Ceny i marże ustalone</label>
+                                <label><input type="checkbox"> Kategorie przypisane</label>
+                            </div>
+
+                            <div class="checklist-section">
+                                <h5>🔌 Integracje</h5>
+                                <label><input type="checkbox"> Allegro połączone i przetestowane</label>
+                                <label><input type="checkbox"> OLX/inne platformy skonfigurowane</label>
+                                <label><input type="checkbox"> BaseLinker (jeśli używany)</label>
+                                <label><input type="checkbox"> Kurierzy skonfigurowani (InPost, DPD, etc.)</label>
+                                <label><input type="checkbox"> Test generowania etykiet</label>
+                            </div>
+
+                            <div class="checklist-section">
+                                <h5>📋 Statusy i przepływy</h5>
+                                <label><input type="checkbox"> Mapowanie statusów kanałów wykonane</label>
+                                <label><input type="checkbox"> Automatyzacje skonfigurowane</label>
+                                <label><input type="checkbox"> Powiadomienia e-mail działają</label>
+                            </div>
+
+                            <div class="checklist-section">
+                                <h5>💰 Dokumenty finansowe</h5>
+                                <label><input type="checkbox"> Numeracja faktur zgodna</label>
+                                <label><input type="checkbox"> Stawki VAT poprawne</label>
+                                <label><input type="checkbox"> Test wystawienia faktury</label>
+                                <label><input type="checkbox"> Integracja z systemem księgowym</label>
+                            </div>
+
+                            <div class="checklist-section">
+                                <h5>📊 Raporty</h5>
+                                <label><input type="checkbox"> Dashboard sprzedaży działa</label>
+                                <label><input type="checkbox"> Raporty magazynowe skonfigurowane</label>
+                                <label><input type="checkbox"> Eksporty testowane</label>
+                            </div>
+
+                            <div class="checklist-section">
+                                <h5>👤 Zespół</h5>
+                                <label><input type="checkbox"> Użytkownicy utworzeni z poprawnymi uprawnieniami</label>
+                                <label><input type="checkbox"> Szkolenie zespołu przeprowadzone</label>
+                                <label><input type="checkbox"> Dokumentacja dostępna dla pracowników</label>
+                            </div>
+
+                            <div class="checklist-section">
+                                <h5>🧪 Testy</h5>
+                                <label><input type="checkbox"> Testowe zamówienie end-to-end wykonane</label>
+                                <label><input type="checkbox"> Test zwrotu/reklamacji</label>
+                                <label><input type="checkbox"> Test synchronizacji stanów</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="content-block">
+                        <h4>🎯 Dobre praktyki eksploatacyjne</h4>
+                        <ul class="content-list">
+                            <li><strong>Codziennie:</strong> Monitoruj logi synchronizacji i stany alertów</li>
+                            <li><strong>Tygodniowo:</strong> Przegląd rezerwacji >48h, produkty out-of-stock, raport sprzedaży</li>
+                            <li><strong>Miesięcznie:</strong> Test kopii zapasowej, inwentaryzacja próbna, analiza zwrotów</li>
+                            <li><strong>Kwartalnie:</strong> Audyt uprawnień użytkowników, przegląd automatyzacji</li>
+                            <li><strong>Zasada 4-oczu:</strong> Weryfikacja dokumentów finansowych przez innego użytkownika</li>
+                        </ul>
+                    </div>
+
+                    <div class="content-block">
+                        <h4>🚀 Po uruchomieniu</h4>
+                        <ul class="content-list">
+                            <li>Pierwszy tydzień: intensywne monitorowanie wszystkich procesów</li>
+                            <li>Zbieraj feedback od zespołu i optymalizuj workflow</li>
+                            <li>Dokumentuj niestandardowe procedury w wewnętrznej wiki</li>
+                            <li>Regularne backup'y danych przed większymi zmianami</li>
+                            <li>Utrzymuj kontakt z supportem MassTrade dla bieżących problemów</li>
+                        </ul>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
