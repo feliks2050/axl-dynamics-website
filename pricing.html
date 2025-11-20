@@ -139,7 +139,7 @@
                         </li>
                     </ul>
 
-                    <a href="https://masstrade.pl/register?plan=standard" class="btn-outline plan-cta">Rozpocznij za darmo</a>
+                    <a href="#demo" class="btn-outline plan-cta">Umów wizytę</a>
                 </div>
 
                 <!-- Enterprise Plan (Featured) -->
@@ -215,7 +215,7 @@
                         </li>
                     </ul>
 
-                    <a href="https://masstrade.pl/register?plan=enterprise" class="btn-primary plan-cta">Rozpocznij za darmo</a>
+                    <a href="#demo" class="btn-primary plan-cta">Umów wizytę</a>
                 </div>
             </div>
 
@@ -447,17 +447,50 @@
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="cta-section">
+    <!-- Contact Form Section -->
+    <section class="contact-form-section" id="demo">
         <div class="container">
-            <div class="cta-content">
-                <h2 class="cta-title">Gotowy na Start?</h2>
-                <p class="cta-subtitle">Rozpocznij 14-dniowy darmowy okres próbny i zobacz, jak MassTrade zmieni Twoją sprzedaż.</p>
-                <div class="cta-buttons">
-                    <a href="https://masstrade.pl/register" class="btn-primary btn-large">Rozpocznij za darmo</a>
-                    <a href="index.html#kontakt" class="btn-outline-light btn-large">Umów prezentację</a>
-                </div>
-                <p class="cta-note">✓ Bez karty kredytowej &nbsp; ✓ Pełny dostęp &nbsp; ✓ Anuluj w każdej chwili</p>
+            <div class="contact-form-content">
+                <h2 class="section-title">Umów Wizytę</h2>
+                <p class="section-subtitle">Skontaktujemy się z Tobą, aby omówić szczegóły planu i odpowiedzieć na pytania</p>
+                
+                <form class="contact-form" id="contactForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="companyName">Nazwa firmy *</label>
+                            <input type="text" id="companyName" name="companyName" required placeholder="Wpisz nazwę firmy">
+                        </div>
+                        <div class="form-group">
+                            <label for="regon">REGON *</label>
+                            <input type="text" id="regon" name="regon" required placeholder="Wpisz numer REGON">
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">E-mail *</label>
+                            <input type="email" id="email" name="email" required placeholder="twoj@email.pl">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Telefon *</label>
+                            <input type="tel" id="phone" name="phone" required placeholder="+48 123 456 789">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="preferredTimes">Preferowane terminy kontaktu</label>
+                        <textarea id="preferredTimes" name="preferredTimes" rows="4" placeholder="Np. poniedziałek-piątek 9:00-17:00, lub konkretne daty i godziny"></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Dodatkowe informacje (opcjonalnie)</label>
+                        <textarea id="message" name="message" rows="3" placeholder="Opisz swoje potrzeby lub zadaj pytanie"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn-primary btn-large">Wyślij zapytanie</button>
+                    
+                    <p class="form-note">* Pola wymagane. Skontaktujemy się z Tobą w ciągu 24 godzin.</p>
+                </form>
             </div>
         </div>
     </section>

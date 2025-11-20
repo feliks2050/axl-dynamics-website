@@ -296,6 +296,122 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
+    // ===== Contact Form Handler =====
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Pobierz dane z formularza
+            const formData = new FormData(this);
+            const data = {
+                companyName: formData.get('companyName'),
+                regon: formData.get('regon'),
+                email: formData.get('email'),
+                phone: formData.get('phone'),
+                preferredTimes: formData.get('preferredTimes'),
+                message: formData.get('message')
+            };
+            
+            // Walidacja podstawowa
+            if (!data.companyName || !data.regon || !data.email || !data.phone) {
+                showFormMessage('error', 'Proszę wypełnić wszystkie wymagane pola.');
+                return;
+            }
+            
+            // Walidacja email
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(data.email)) {
+                showFormMessage('error', 'Proszę podać poprawny adres email.');
+                return;
+            }
+            
+            // Walidacja REGON (9 lub 14 cyfr)
+            const regonRegex = /^\d{9}(\d{5})?$/;
+            if (!regonRegex.test(data.regon.replace(/\s/g, ''))) {
+                showFormMessage('error', 'REGON musi zawierać 9 lub 14 cyfr.');
+                return;
+            }
+            
+            // Wyświetl komunikat ładowania
+            const submitButton = this.querySelector('button[type="submit"]');
+            const originalButtonText = submitButton.textContent;
+            submitButton.disabled = true;
+            submitButton.textContent = 'Wysyłanie...';
+            
+            // Symulacja wysłania (w produkcji należy wysłać do backendu)
+            console.log('Dane formularza:', data);
+            
+            // Tutaj należy dodać prawdziwe wysyłanie np. przez fetch do API
+            // fetch('/api/contact', {
+            //     method: 'POST',
+            //     headers: { 'Content-Type': 'application/json' },
+            //     body: JSON.stringify(data)
+            // })
+            
+            setTimeout(() => {
+                showFormMessage('success', 'Dziękujemy za wysłanie formularza! Skontaktujemy się z Tobą w ciągu 24 godzin.');
+                contactForm.reset();
+                submitButton.disabled = false;
+                submitButton.textContent = originalButtonText;
+            }, 1000);
+        });
+        
+        // Funkcja do wyświetlania komunikatów
+        function showFormMessage(type, message) {
+            // Usuń poprzednie komunikaty
+            const existingMessages = contactForm.querySelectorAll('.form-success, .form-error');
+            existingMessages.forEach(msg => msg.remove());
+            
+            // Utwórz nowy komunikat
+            const messageDiv = document.createElement('div');
+            messageDiv.className = type === 'success' ? 'form-success' : 'form-error';
+            messageDiv.textContent = message;
+            
+            // Wstaw komunikat na początku formularza
+            contactForm.insertBefore(messageDiv, contactForm.firstChild);
+            
+            // Przewiń do komunikatu
+            messageDiv.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            
+            // Usuń komunikat po 5 sekundach
+            if (type === 'success') {
+                setTimeout(() => {
+                    messageDiv.style.transition = 'opacity 0.5s ease';
+                    messageDiv.style.opacity = '0';
+                    setTimeout(() => messageDiv.remove(), 500);
+                }, 5000);
+            }
+        }
+        
+        // Walidacja w czasie rzeczywistym
+        const emailInput = contactForm.querySelector('#email');
+        const regonInput = contactForm.querySelector('#regon');
+        
+        if (emailInput) {
+            emailInput.addEventListener('blur', function() {
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (this.value && !emailRegex.test(this.value)) {
+                    this.style.borderColor = '#EF4444';
+                } else {
+                    this.style.borderColor = '';
+                }
+            });
+        }
+        
+        if (regonInput) {
+            regonInput.addEventListener('blur', function() {
+                const regonRegex = /^\d{9}(\d{5})?$/;
+                const cleanedValue = this.value.replace(/\s/g, '');
+                if (this.value && !regonRegex.test(cleanedValue)) {
+                    this.style.borderColor = '#EF4444';
+                } else {
+                    this.style.borderColor = '';
+                }
+            });
+        }
+    }
+    
     // ===== Console Message =====
     console.log('%c🚀 AXL Dynamics Website', 'font-size: 20px; font-weight: bold; color: #FF6B35;');
     console.log('%cBuilt with modern web technologies', 'font-size: 12px; color: #004E89;');
